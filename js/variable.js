@@ -12,6 +12,23 @@
 // var x = 10;
 // console.log(x); 10
 
+/*----------------------------------------- in another scope the variable will reassign------------------------*/
+// var test = "my test";
+// for (let i = 0; i < 5; i++) {
+//   var test = "for loop test";
+//   console.log(test);
+// }
+// console.log(test);
+/*
+for loop test
+for loop test
+for loop test
+for loop test
+for loop test
+for loop test
+
+*/
+
 /* -------------------------------------------let-----------------------------------------  */
 // let x = 10;
 // x = 11;
@@ -24,6 +41,23 @@
 // let x = 10;
 // let x = 10;
 // console.log(x); error
+
+/*-----------------------------------------can be declare in another scope------------------------*/
+// let test = "my test";
+// for (let i = 0; i < 5; i++) {
+//   let test = "for loop test";
+//   console.log(test);
+// }
+// console.log(test);
+/*
+for loop test
+for loop test
+for loop test
+for loop test
+for loop test
+my test
+
+*/
 
 /* -------------------------------------------const-----------------------------------------  */
 
