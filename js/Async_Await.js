@@ -28,7 +28,7 @@ let sleeping = new Promise((res, rej) => {
 const run = async () => {
   try {
     const eat = await eating;
-    console.log(eat, "eat");
+    console.log(eat);
     const play = await playing;
     console.log(play);
     const sleep = await sleeping;
