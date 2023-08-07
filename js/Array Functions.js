@@ -37,4 +37,26 @@ let array = [1, 2, 3, 4, 5];
 // //     5, 6, 7, 8
 // //   ]
 
-console.log(array.join(" % ")); //1 % 2 % 3 % 4 % 5
+// console.log(array.join(" % ")); //1 % 2 % 3 % 4 % 5
+
+// console.log(
+//   array.find((x) => {
+//     return x == 2;
+//   })
+// ); //2
+let array2 = [3, 1, 5, 4, 2, 20, 30, 11, 231, 323];
+// console.log(array2.sort()); //[ 1, 2, 3, 4, 5 ]
+// console.log(array2); //[ 1, 2, 3, 4, 5 ]
+
+console.log(array2.sort()); //[1, 11,   2, 20, 231,3, 30, 323,  4,   5]
+
+console.log(
+  array2.sort((a, b) => {
+    if (a > b) {
+      return 1;
+    }
+    if (a < b) {
+      return -1;
+    }
+  })
+); //[1,  2,  3,   4,   5,11, 20, 30, 231, 323]
