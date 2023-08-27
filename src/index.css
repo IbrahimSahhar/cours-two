@@ -12,3 +12,7 @@ a {
 .active {
   border-bottom: 0.125rem solid red;
 }
+
+button {
+  padding: 0.625rem 1.25rem;
+}

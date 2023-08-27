@@ -6,6 +6,9 @@ import Content from "../pages/Content";
 import { Cards } from "../pages/Cards";
 import { AuthContext } from "../context/AuthContext";
 import Form from "../pages/form";
+import Reducer from "../pages/Reducer";
+import Posts from "../pages/Posts";
+import Todos from "../pages/Todos";
 
 const Routers = () => {
   const auth = useContext(AuthContext);
@@ -22,6 +25,10 @@ const Routers = () => {
     { path: "about", element: <About /> },
     { path: "content", element: <Content /> },
     { path: "cards", element: <Cards /> },
+    { path: "reducer", element: <Reducer /> },
+    { path: "posts", element: <Posts /> },
+    { path: "todos", element: <Todos /> },
+
     { path: "*", element: <>This Page Not Found 404</> },
   ]);
   return router;

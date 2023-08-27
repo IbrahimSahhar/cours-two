@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 function NavBar() {
@@ -43,6 +43,16 @@ function NavBar() {
               <Nav.Link>
                 <NavLink to={"/cards"}>Cards</NavLink>
               </Nav.Link>
+              <Nav.Link>
+                <NavLink to={"/reducer"}>Reducer</NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink to={"/posts"}>Posts</NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink to={"/todos"}>Todos</NavLink>
+              </Nav.Link>
+
               <Nav.Link>
                 <button className="btn btn-info" onClick={() => logOut()}>
                   Log Out

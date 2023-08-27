@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 const Home = () => {
   const [name, setName] = useState("ibrahim");
   const handelChange = (e) => {
-    setName(e.target.value); 
+    setName(e.target.value);
   };
   useEffect(() => {
     console.log(name);

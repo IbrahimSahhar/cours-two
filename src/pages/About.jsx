@@ -1,24 +1,44 @@
-import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import React, { useMemo, useState } from "react";
 import NavBar from "../components/NavBar";
 
 const About = () => {
-  const [goToContent, setGoToContent] = useState(false);
+  const randomColor = "#" + Math.floor(Math.random() * 16777215);
+  const [counter, setCounter] = useState(0);
+  const [test, setTest] = useState(0);
+
+  const result = useMemo(() => {
+    return (
+      <div style={{ color: randomColor }}>
+        the value {counter} * 2 = {counter * 2}
+      </div>
+    );
+  }, [counter, randomColor]);
+  //use memo
   return (
     <div>
       <NavBar />
-
-      <div>About</div>
-      <Link to={"/"}>Go To Home</Link>
-      <br />
+      {result}
       <button
         onClick={() => {
-          setGoToContent(true);
+          setCounter(counter + 1);
         }}
       >
-        Go to Content
+        +
       </button>
-      {goToContent ? <Navigate to={"/content"} /> : ""}
+      <button
+        onClick={() => {
+          setCounter(counter - 1);
+        }}
+      >
+        -
+      </button>
+      <button
+        onClick={() => {
+          setTest(test + 1);
+        }}
+      >
+        test
+      </button>
     </div>
   );
 };
