@@ -1,18 +1,25 @@
 import React, { useState } from "react";
-import ContainerComponent from "./components/Container";
-import DateCount from "./components/DateCount";
-import DateList from "./components/DateList";
-import DateButtons from "./components/DateButtons";
-import { data } from "./mock/data";
+import NavBar from "./components/NavBar";
+import Food from "./pages/Food";
+import { MealContext } from "./context/MealContext";
+import { mealsData } from "./mock/mealsData";
+import { Zoom } from "react-reveal";
 function App() {
-  const [dateData, setDateData] = useState(data);
+  const [meals, setMeals] = useState([
+    ...mealsData.افطار,
+    ...mealsData.غداء,
+    ...mealsData.عشاء,
+    ...mealsData.سناك,
+  ]);
+
   return (
-    <div className="font color-body">
-      <ContainerComponent styles="py-4">
-        <DateCount dateData={dateData} />
-        <DateList dateData={dateData} />
-        <DateButtons setDateData={setDateData} />
-      </ContainerComponent>
+    <div>
+      <MealContext.Provider value={{ meals, setMeals }}>
+        <NavBar />
+        <Zoom>
+          <Food />
+        </Zoom>
+      </MealContext.Provider>
     </div>
   );
 }
